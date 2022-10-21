@@ -7,6 +7,7 @@ import About from "./Component/About/About";
 import Contact from "./Component/Contact/Contact";
 import Footer from "./Component/Footer/Footer"
 
+
 const App = () => {
   return(
       <>
@@ -19,6 +20,7 @@ const App = () => {
             </Route>
           </Routes>
         </BrowserRouter>
+       
 
         <Footer />
       </>

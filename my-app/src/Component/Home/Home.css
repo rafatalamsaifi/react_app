@@ -7,11 +7,22 @@
 h2 {
     display: flex;
     max-height: 100vh;
-    color: white;
     justify-content: center;
     align-items: center;
     margin: 100px 0;
+    font-size: 50px;
 }
-body {
-    background-color: rgb(29, 29, 29);
+
+#bttn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+Button {
+    color: black;
+    background-color: tomato;
+    padding: 4px 6px;
+    margin: 4px 10px;
+    font-size: 20px;
 }
