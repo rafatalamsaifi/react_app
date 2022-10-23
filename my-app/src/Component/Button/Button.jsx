@@ -7,6 +7,8 @@ const Button = (props)=> {
         setCurrentVal(currentVal + props.countNumber);
         // alert("This function is working properly!")
     }
+
+   
     return (
         <>
             <div>
