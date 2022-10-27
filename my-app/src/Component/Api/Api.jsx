@@ -1,29 +1,27 @@
-import './Api.css'
+import { useState } from 'react';
+
+import './Api.css';
+
 const Api = ()=> {
-    const result = document.getElementById('root');
+    const [users,setUsers] = useState([])
+    
     async function fetchData(){
         try{
-            const url = "https://jsonplaceholder.typicode.com/users";
-            const res = await fetch(url);
-            const users = await res.json();
-            showOnUl(users)
-            console.log(users);
-
+            const res = await fetch("https://jsonplaceholder.typicode.com/users");
+            const data = await res.json();
+            setUsers(data)
         }catch(error){
             console.log("error occurred")
         }
     }
-     function showOnUl(users){
-        users.map(function(user){
-            const li = document.createElement('li');
-            li.innerHTML = user.name
-             result.appendChild(li)
-        })
-    }
+
     return(
         <>
-            <button id='api' onClick={fetchData}>Fetch Data</button>
-            <ul id="root"></ul>
+            <button id='api' onClick={fetchData}>Load data</button>
+            <div>
+                {/* {users.map(u=> <User user={u} />)} */}
+                {users.map(u=> <li>{u.name}</li>)}
+            </div>
         </>
     )
 };
