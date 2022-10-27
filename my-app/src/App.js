@@ -5,7 +5,7 @@ import Navbar from "./Component/Navbar/Navbar"
 import Home from "./Component/Home/Home";
 import About from "./Component/About/About";
 import Contact from "./Component/Contact/Contact";
-import Service from "./Component/Service/Service";
+import Api from "./Component/Api/Api";
 import Footer from "./Component/Footer/Footer"
 
 
@@ -18,7 +18,7 @@ const App = () => {
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
-              <Route path="service" element={<Service />} />
+              <Route path="Api" element={<Api />} />
             </Route>
           </Routes>
         </BrowserRouter>
